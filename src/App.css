@@ -1,42 +1,96 @@
+body {
+  background-color: #404EED;
+}
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  min-height: 100vh;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* Navbar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 48px;
+  align-items: center;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.discord-logo {
+  height: 32px;
+  width: auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.menu-icon {
+  height: 40px;
+  width: auto;
 }
 
-.card {
-  padding: 2em;
+header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 800px;
+  padding: 0 48px;
+  margin-top: 3rem;
+  border-bottom: 1px solid #FFFFFF;
+  overflow: hidden;
 }
 
-.read-the-docs {
-  color: #888;
+header h1 {
+  color: white;
+  width: 40vw;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 900;
+  font-size: 4.2rem;
+  line-height: 100%;
+  text-transform: uppercase;
+}
+
+header p {
+  max-width: 50vw;
+  min-width: 300px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 1.4rem;
+  color: #FFFFFF;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+
+.hero-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 300px;
+  max-width: fit-content;
+  padding: 20px 40px;
+  border: none;
+  outline: none;
+  margin-bottom: 2rem;
+  border-radius: 36px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.btn-white {
+  background-color: white;
+  color: #000000;
+}
+
+.btn-black {
+  background-color: #000000;
+  color: #FFFFFF;
+}
+
+.discord-background {
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
+  right: -5vw;
+  height: 35vw;
+  max-height: 600px;
 }

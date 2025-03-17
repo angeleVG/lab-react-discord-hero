@@ -1,35 +1,31 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import './App.css';
+import { Nav } from './components/Nav.jsx';
+import discordBackground from './assets/discord-background.png'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
+    <div className="App">
+    <Nav />
+      <header className="hero-header">
+        <h1>Imagine a place...</h1>
         <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
+        ...where you can belong to a school club, a gaming group, or a worldwide art community. 
+        Where just you and a handful of friends can spend time together. 
+        A place that makes it easy to talk every day and hang out more often.
         </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+
+        <div className="hero-buttons">
+          <button className="hero-button btn-white">Download for Windows</button>
+          <button className="hero-button btn-black">Open Discord in your browser</button>
+        </div>
+
+        <img src={discordBackground} alt="discord background" className="discord-background"/>
+      </header>
+
+
+    </div>
   )
 }
+
 
 export default App
